@@ -3,7 +3,8 @@
     private static void Main(string[] args)
     {
         Console.Clear();
-        Soma();
+        
+        Multiplicacao();
 
         Console.ReadKey();
     }
@@ -46,6 +47,18 @@
         float resultado = valor1 / valor2;
 
         Console.WriteLine($"{valor1} / {valor2} = {resultado}");
+    }
+
+    static void Multiplicacao(){
+        Console.Write("Primeiro valor: ");
+        float valor1 = float.Parse(Console.ReadLine());
+
+        Console.Write("Segundo valor: ");
+        float valor2 = float.Parse(Console.ReadLine());
+
+        float resultado = valor1 * valor2;
+
+        Console.WriteLine($"{valor1} * {valor2} = {resultado}");
     }
 
 }
