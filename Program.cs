@@ -6,10 +6,12 @@
 
         Menu();
 
-        Console.ReadKey();
     }
 
-    static void Menu(){
+    static void Menu()
+    {
+        Console.Clear();
+
         Console.WriteLine("Bem vinso! o que deseja fazer?");
         Console.WriteLine("1 - Soma");
         Console.WriteLine("2 - Subtração");
@@ -18,7 +20,27 @@
 
         Console.WriteLine("--------------------------");
         Console.Write("Selecione uma opção: ");
+
         short opcao = short.Parse(Console.ReadLine());
+
+        switch (opcao)
+        {
+            case 1:
+                Soma();
+                break;
+            case 2:
+                Subtracao();
+                break;
+            case 3:
+                Divisao();
+                break;
+            case 4:
+                Multiplicacao();
+                break;
+            default:
+                Menu();
+                break;
+        }
     }
 
     static void Soma()
@@ -32,6 +54,9 @@
         float resultado = valor1 + valor2;
 
         Console.WriteLine($"{valor1} + {valor2} = {resultado}");
+
+        Console.ReadKey();
+        Menu();
     }
 
     static void Subtracao()
@@ -46,6 +71,9 @@
 
         Console.WriteLine($"{valor1} + {valor2} = {resultado}");
 
+        Console.ReadKey();
+        Menu();
+
     }
 
     static void Divisao()
@@ -59,9 +87,13 @@
         float resultado = valor1 / valor2;
 
         Console.WriteLine($"{valor1} / {valor2} = {resultado}");
+
+        Console.ReadKey();
+        Menu();
     }
 
-    static void Multiplicacao(){
+    static void Multiplicacao()
+    {
         Console.Write("Primeiro valor: ");
         float valor1 = float.Parse(Console.ReadLine());
 
@@ -71,6 +103,9 @@
         float resultado = valor1 * valor2;
 
         Console.WriteLine($"{valor1} * {valor2} = {resultado}");
+
+        Console.ReadKey();
+        Menu();
     }
 
 }
