@@ -3,10 +3,22 @@
     private static void Main(string[] args)
     {
         Console.Clear();
-        
-        Multiplicacao();
+
+        Menu();
 
         Console.ReadKey();
+    }
+
+    static void Menu(){
+        Console.WriteLine("Bem vinso! o que deseja fazer?");
+        Console.WriteLine("1 - Soma");
+        Console.WriteLine("2 - Subtração");
+        Console.WriteLine("3 - Divisão");
+        Console.WriteLine("4 - Multiplicação");
+
+        Console.WriteLine("--------------------------");
+        Console.Write("Selecione uma opção: ");
+        short opcao = short.Parse(Console.ReadLine());
     }
 
     static void Soma()
